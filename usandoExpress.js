@@ -1,14 +1,17 @@
-let express = require("express");
+const express = require("express");
 // después de haber generado un proyecto con npm init -y y luego haber instalado express mediante npm install express --save
 // ahora lo que hicimos es generar una variable que ejecute express
 
-let usandoExpress = express();
+const app = express();
+// esta variable constante lo que hace es ejecutar express
 
+app.use(express.static('public')); 
+//aquí lo que vamos a indicar es que sirva imágenes, archivos CSS, y archivos JavaScript desde un directorio nombrado 'public' al mismo nivel desde donde llama a node:
 
 //console.log(app);
 
 
-usandoExpress.listen(3000, () => console.log("El proceso fue exitoso"));
+app.listen(3000, () => console.log("El proceso fue exitoso"));
 // este método pone a correr el servidor. Primero vamos a indicar el puerto y luego, de forma optativa, una función.
 // para probar puedo entrar al navegador y tipear localhost:3000
 
@@ -16,16 +19,16 @@ usandoExpress.listen(3000, () => console.log("El proceso fue exitoso"));
 res.send("Bienvenido Oscar");
 });*/
 
-usandoExpress.get("/contacto", function(req, res){
+app.get("/contacto", function(req, res){
     res.send("Nuestra dirección de correo es: ...");
     });
 
-    usandoExpress.get("/un-array", function(req, res){
+    app.get("/un-array", function(req, res){
         res.send([1,2,3,4]);
         });
 
 
-        usandoExpress.get("/un-objeto", function(req, res){
+        app.get("/un-objeto", function(req, res){
             res.send({name: "Oscar"});
             });
 
@@ -36,11 +39,11 @@ usandoExpress.get("/contacto", function(req, res){
 /* este es un ejemplo de cómo podría enviar una variable que consta de un objeto con propiedades
 
 const express = require('express');
-const usandoExpress = express();
+const app = express();
 
 let producto = ({tipoProducto: null, precio: null, cantidad: null});
 
-usandoExpress.get("/producto/agregar",function (req,res){
+app.get("/producto/agregar",function (req,res){
     res.send(producto);
 }); */
 
