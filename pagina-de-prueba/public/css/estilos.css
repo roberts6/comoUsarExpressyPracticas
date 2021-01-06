@@ -1,0 +1,16 @@
+*{
+    background-image: url(/public/img/instrumentos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+
+h1{text-align: center}
+
+.boton{ 
+    height: 5%;
+    width: 5%;
+    border: 5px solid green;
+    display: inline-block;
+    margin-left: 10px;
+}
