@@ -5,12 +5,20 @@
     background-attachment: fixed;
     }
 
-h1{text-align: center}
+h1{text-align: center;
+    font-family: 'Pirata One', cursive;
+    font-family: 'Staatliches', cursive;}
 
 .boton{ 
+    
     height: 5%;
     width: 5%;
     border: 5px solid green;
     display: inline-block;
     margin-left: 10px;
+}
+
+p{
+    color: coral;
+    background: rgba(0,170,228,0.4);
 }
