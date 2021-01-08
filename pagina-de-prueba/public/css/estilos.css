@@ -1,24 +1,30 @@
 *{
-    background-image: url(/public/img/instrumentos.jpg);
+    background-image: url(/static/img/instrumentos.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     }
 
-h1{text-align: center;
+h1{ text-align: center;
     font-family: 'Pirata One', cursive;
     font-family: 'Staatliches', cursive;}
 
-.boton{ 
-    
+section{
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+}
+
+section .boton{ 
     height: 5%;
     width: 5%;
     border: 5px solid green;
-    display: inline-block;
-    margin-left: 10px;
 }
 
 p{
-    color: coral;
+    color: deeppink;
     background: rgba(0,170,228,0.4);
+    padding: 1%;
+    text-align: left;
+    font-family: fantasy;
 }
