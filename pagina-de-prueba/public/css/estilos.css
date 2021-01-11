@@ -3,6 +3,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    box-sizing: border-box;
+    /*box-sizing: border-box; me va a ayudar a que por más que cambie la pantalla del dispositivo no cambien las medidas relativas asignadas*/
     }
 
 h1{ text-align: center;
@@ -22,9 +24,36 @@ section .boton{
 }
 
 p{
+    width: 80%;
+    max-width: 1200px;
+    /*el comando max-width lo que va a hacer es mantener el width que acabo de indicarle hasta ese nivel de px. O sea que nunca va a superar ese ancho*/
     color: deeppink;
     background: rgba(0,170,228,0.4);
-    padding: 1%;
+    padding: 15px;
     text-align: left;
     font-family: fantasy;
+    border: 5px solid black;
+    margin: auto;
 }
+
+@media(min-width: 600px){
+    p{
+        background: coral;
+        color: black;
+    }
+}
+
+@media(min-width: 900px){
+    p{
+        background: green;
+        color: wheat;
+    }
+}
+
+/*
+los estándares que se manejan para los medias queries son de:
+576
+768
+992
+1200 
+*/

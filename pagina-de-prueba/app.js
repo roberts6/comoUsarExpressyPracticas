@@ -4,7 +4,7 @@ const path = require("path");
 
 app.use('/static', express.static(__dirname + '/public'));
 
-const publicPath = path.resolve(__dirname, "./practicasVarias");
+const publicPath = path.resolve(__dirname, "./practicas-varias");
 
 app.listen(3506, () => console.log("Funcionando en el puerto 3506"));
 
